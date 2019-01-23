@@ -7,8 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet(
-        name = "upload",
-        urlPatterns = {"/upload"}
+        name = "cookie",
+        urlPatterns = {"/cookie_example"}
 )
 
 public class CookieServlet extends HttpServlet {

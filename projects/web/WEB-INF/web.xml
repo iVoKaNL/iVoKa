@@ -15,22 +15,30 @@
         <param-value>com.mysql.jdbc.Driver</param-value>
     </context-param>
     <context-param>
-        <param-name>databaseUrl</param-name>
-        <param-value>jdbc:mysql://localhost/eshop</param-value>
+        <param-name>databaseURL</param-name>
+        <param-value>jdbc:mysql://localhost:8889/ebookshop</param-value>
     </context-param>
     <context-param>
         <param-name>user</param-name>
-        <param-value>myuser</param-value>
+        <param-value>ebook</param-value>
     </context-param>
     <context-param>
         <param-name>password</param-name>
-        <param-value>xxxx</param-value>
+        <param-value>holletje</param-value>
     </context-param>
 
     <context-param>
         <param-name>publicVar</param-name>
         <param-value>false</param-value>
     </context-param>
+
+    <!-- Define resources (Located at META-INF) -->
+    <resource-ref>
+        <description>DB Connection Pool</description>
+        <res-ref-name>jdbc/mysql_ebookshop</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 
     <!-- Define servlets -->
     <servlet>
@@ -63,9 +71,10 @@
 
     <!-- For directory request -->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>start</welcome-file>
+        <!--<welcome-file>index.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.htm</welcome-file>-->
     </welcome-file-list>
 
     <error-page>
