@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="iVoKa:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/iVoKa_jar</output-path>
+    <root id="archive" name="iVoKa.jar">
+      <element id="module-output" name="iVoKa" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libraries/tomcat-catalina-9.0.14.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
