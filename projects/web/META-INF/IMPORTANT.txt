@@ -1,0 +1,1 @@
+The 'context.xml' has to be in the META-INF as a 'sibling' of WEB-INF
