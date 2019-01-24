@@ -138,6 +138,19 @@ public class QueryServlet extends HttpServlet {
 
                     // Hyperlink to go back to search menu
                     out.println("<p><a href='start'>Back to Select Menu</a></p>");
+
+                    // Show "View Shopping Cart" if cart is not empty
+                    HttpSession session = request.getSession(false); // check if session exists
+                    if (session != null) {
+                        Cart cart;
+                        synchronized (session) {
+                            // Retrieve the shopping cart for this session, if any. Otherwise, create one.
+                            cart = (Cart) session.getAttribute("cart");
+                            if (cart != null && !cart.isEmpty()) {
+                                out.println("<p><a href='cart?todo=view'>View Shopping Cart</a></p>");
+                            }
+                        }
+                    }
                 }
             }
             out.println("</body></html>");
