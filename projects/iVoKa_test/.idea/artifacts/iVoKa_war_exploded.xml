@@ -7,10 +7,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="iVoKa" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="tomcat-catalina-9.0.14" />
-          <element id="library" level="project" name="mysql-connector-java-8.0.14" />
-        </element>
+        <element id="directory" name="lib" />
       </element>
     </root>
   </artifact>
